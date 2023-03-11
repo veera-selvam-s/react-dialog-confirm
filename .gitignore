@@ -1,0 +1,9 @@
+node_modules
+*.log
+.idea
+*.iml
+*.sw*
+!.swcrc
+dist
+*.DS_Store
+.cache

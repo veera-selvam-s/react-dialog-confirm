@@ -1,0 +1,43 @@
+{
+  "name": "react-dialog-confirm",
+  "version": "1.0.0",
+  "description": "React Alert Modal Component Library, an open-source solution for displaying user alerts in a sleek and user-friendly manner.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "keywords": [
+    "react-dialog-confirm",
+    "react-alert",
+    "react-modal",
+    "modals",
+    "alerts",
+    "confirmation"
+  ],
+  "author": "veera selvam",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.21.0",
+    "@storybook/addon-actions": "^7.0.0-rc.1",
+    "@storybook/addon-essentials": "^7.0.0-rc.1",
+    "@storybook/addon-interactions": "^7.0.0-rc.1",
+    "@storybook/addon-links": "^7.0.0-rc.1",
+    "@storybook/addon-mdx-gfm": "^7.0.0-rc.1",
+    "@storybook/react": "^7.0.0-rc.1",
+    "@storybook/react-webpack5": "^7.0.0-rc.1",
+    "@storybook/testing-library": "^0.0.14-next.1",
+    "babel-loader": "^8.3.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.0.0-rc.1"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
