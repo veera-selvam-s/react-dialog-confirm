@@ -1,1 +1,2 @@
-export * from './DialogModal'
+export * from './DialogModal';
+export * from './DialogContext';
