@@ -4,6 +4,11 @@
   "description": "React Alert Modal Component Library, an open-source solution for displaying user alerts in a sleek and user-friendly manner.",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/veera-selvam-s/react-dialog-confirm"
+  },
+  "homepage": "https://react-dialog-confirm.netlify.app",
   "scripts": {
     "lint": "npx eslint src",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -47,6 +52,7 @@
     "eslint-plugin-n": "^15.6.1",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.32.2",
+    "postcss": "^8.4.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rollup": "^3.19.1",
@@ -59,8 +65,5 @@
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
-  },
-  "dependencies": {
-    "postcss": "^8.4.21"
   }
 }

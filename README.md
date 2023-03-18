@@ -28,6 +28,46 @@ You can install `react-dialog-confirm` using npm:
 ``` shell
 npm install react-dialog-confirm
 ```
+or
+``` shell
+yarn add react-dialog-confirm
+```
+
+## Usage
+To use `react-dialog-confirm`, you need to import it into your React component:
+```javascript
+import { DialogProvider } from 'react-dialog-confirm';
+```
+cover your App component
+
+```javascript
+import {DialogProvider} from 'react-dialog-confirm';
+
+export default function index() {
+  return (
+    <DialogProvider>
+      <App />
+    </DialogProvider>
+  )
+}
+
+```
+callback open modal function to open modal dialog.
+
+```jsx
+import { DialogModal, useModal } from "react-dialog-confirm";
+...
+//in component
+const { openModal } = useModal();
+
+openModal(
+  <DialogModal
+    icon='success'
+    title='Welcome'
+    description={'welcome to react-dialog-confirm component'}
+  />)
+...
+```
 
 ## Props
 
@@ -45,6 +85,50 @@ Here are the available props for the DialogModal component:
 | onConfirm  | 	function    | 	-                               | 	() => {} |	The callback function that will be called when the user confirms the action. |
 | onCancel   | 	function    | 	-                               | 	() => {} |	The callback function that will be called when the user cancels the action. |
 | hasCancel       | 	boolean     | 	-                               | 	false    |	Whether to display a cancel button |
+
+## Examples
+Here are some examples of how you can use react-dialog-confirm in your React application:
+
+_app.js
+```jsx
+import {DialogProvider} from 'react-dialog-confirm';
+
+export default function App({ Component, pageProps }) {
+  return (
+    <DialogProvider>
+      <Component {...pageProps} />
+    </DialogProvider>
+  )
+}
+
+```
+
+Mypage.js
+```jsx
+import React from "react";
+import { DialogModal, useModal } from "react-dialog-confirm";
+
+const Mypage = () => {
+
+    const openModal = useModal()?.openModal;
+
+    const handleClick = () => {
+        openModal(
+        <DialogModal
+        icon='success'
+        title='Welcome'
+        description={'welcome to react-dialog-confirm component'}
+        />)
+    }
+    return(
+        <div>
+            <button onClick={handleClick}>Open modal</button>
+        </div>
+    )
+}
+
+export default Mypage;
+```
 
 ## License
 
