@@ -4,12 +4,23 @@ import Remover from '../Remover';
 import { useModal } from './DialogContext';
 
 export const DialogModal = ({
-  children, icon, title, titleStyle, description, descriptionStyle, confirm, confirmStyle,
-  onConfirm, hasCancel, cancel, onCancel
+  children, 
+  icon, 
+  title, 
+  titleStyle, 
+  description, 
+  descriptionStyle, 
+  confirm, 
+  confirmStyle,
+  onConfirm, 
+  hasCancel, 
+  cancel, 
+  onCancel
 }) => {
   const { isModalOpen, closeModal } = useModal()
   const [out, setOut] = useState(false)
 
+  //Handles closing the dialog.
   const handleClose = () => {
     setOut(true)
   }
@@ -27,7 +38,6 @@ export const DialogModal = ({
       }
     }
     document.addEventListener('keydown', handleEscape)
-
     return () => {
       document.removeEventListener('keydown', handleEscape)
     }

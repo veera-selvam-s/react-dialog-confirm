@@ -1,4 +1,5 @@
 import React from 'react';
+
 const Remover = ({ close }) => (
   <div className={'remover'} onClick={close} >
     <svg xmlns="http://www.w3.org/2000/svg" aria-label="Close"

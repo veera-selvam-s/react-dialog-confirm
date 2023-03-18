@@ -36,10 +36,8 @@ Success.args = {
   descriptionStyle:{},
   confirm:'Dashboard',
   confirmStyle:{},
-  onConfirm:() => {},
   hasCancel:true,
-  cancelStyle:{},
-  onCancel:() => {}
+  cancelStyle:{}
 
 };
 export const Info = Template.bind({});
