@@ -4,7 +4,6 @@
   "description": "React Alert Modal Component Library, an open-source solution for displaying user alerts in a sleek and user-friendly manner.",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
-  "type": "module",
   "scripts": {
     "lint": "npx eslint src",
     "test": "echo \"Error: no test specified\" && exit 1",
