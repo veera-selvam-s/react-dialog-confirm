@@ -9,6 +9,8 @@
 
 A flexible and customizable dialog/modal component for React. This component can be used to display various types of messages to users and allow them to confirm or cancel an action...
 
+[demo](https://react-dialog-confirm.netlify.app)
+
 ## Features
 
 - Easy to use and implement in React applications.

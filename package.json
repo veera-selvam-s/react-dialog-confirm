@@ -2,7 +2,8 @@
   "name": "react-dialog-confirm",
   "version": "1.0.0",
   "description": "React Alert Modal Component Library, an open-source solution for displaying user alerts in a sleek and user-friendly manner.",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
   "type": "module",
   "scripts": {
     "lint": "npx eslint src",
@@ -15,6 +16,9 @@
     "react-dialog-confirm",
     "react-alert",
     "react-modal",
+    "react-dialog",
+    "rc-dialog",
+    "rc-modal",
     "modals",
     "alerts",
     "confirmation"
