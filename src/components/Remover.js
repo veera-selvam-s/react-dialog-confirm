@@ -1,10 +1,16 @@
 import React from "react";
 
-const Remover = ({ close }) => (
-  <div className="remover" onClick={close}>
+const Remover = ({ close, disabled = false }) => (
+  <button
+    className="remover"
+    onClick={close}
+    disabled={disabled}
+    aria-label="Close dialog"
+    type="button"
+  >
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      aria-label="Close"
+      aria-hidden="true"
       className="icon icon-tabler icon-tabler-x"
       width={20}
       height={20}
@@ -19,7 +25,7 @@ const Remover = ({ close }) => (
       <line x1={18} y1={6} x2={6} y2={18} />
       <line x1={6} y1={6} x2={18} y2={18} />
     </svg>
-  </div>
+  </button>
 );
 
 export default Remover;

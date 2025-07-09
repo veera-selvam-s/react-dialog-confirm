@@ -1,7 +1,7 @@
 {
   "name": "react-dialog-confirm",
-  "version": "1.0.3",
-  "description": "React Alert Modal Component Library, an open-source solution for displaying user alerts in a sleek and user-friendly manner.",
+  "version": "2.0.0",
+  "description": "A modern, accessible React modal component library with multiple variants, animations, and enhanced features. Perfect for alerts, confirmations, and custom dialogs.",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "repository": {
@@ -14,7 +14,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "react-dialog-confirm",
@@ -25,7 +26,11 @@
     "rc-modal",
     "modals",
     "alerts",
-    "confirmation"
+    "confirmation",
+    "accessible",
+    "typescript",
+    "react19",
+    "modern-ui"
   ],
   "author": "veera selvam",
   "license": "MIT",

@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from "react";
+import React, { createContext, useContext, useState } from "react";
 import "../../style.css";
 
 /**
@@ -21,29 +21,22 @@ export function DialogProvider({ children }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState(null);
 
-  useEffect(() => {
-    if (modalContent) {
-      setIsModalOpen(true);
-    }
-  }, [modalContent]);
-
-  useEffect(() => {
-    if (isModalOpen === false) {
-      setModalContent(null);
-    }
-  }, [isModalOpen]);
-
   /**
    * Opens the modal and displays the given content.
    * @param {JSX.Element} content - The content to be displayed in the modal.
    */
   const openModal = (content) => {
     setModalContent(content);
+    setIsModalOpen(true);
   };
 
   // Closes the modal.
   const closeModal = () => {
     setIsModalOpen(false);
+    // Clear content after animation
+    setTimeout(() => {
+      setModalContent(null);
+    }, 300);
   };
 
   /** @type {ModalContextValue} */
