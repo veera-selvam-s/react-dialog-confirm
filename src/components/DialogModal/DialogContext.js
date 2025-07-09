@@ -1,5 +1,5 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
-import '../../style.css';
+import React, { createContext, useContext, useState, useEffect } from "react";
+import "../../style.css";
 
 /**
  * @typedef ModalContextValue
@@ -17,21 +17,21 @@ export const ModalContext = createContext({});
  * @param {JSX.Element} props.children - The child components to be wrapped by the provider.
  * @returns {JSX.Element} The component JSX.
  */
-export function DialogProvider ({ children }) {
+export function DialogProvider({ children }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState(null);
 
   useEffect(() => {
     if (modalContent) {
-      return setIsModalOpen(true);
+      setIsModalOpen(true);
     }
-  }, [modalContent])
+  }, [modalContent]);
 
   useEffect(() => {
     if (isModalOpen === false) {
-      return setModalContent(null);
+      setModalContent(null);
     }
-  }, [!isModalOpen])
+  }, [isModalOpen]);
 
   /**
    * Opens the modal and displays the given content.
@@ -39,33 +39,33 @@ export function DialogProvider ({ children }) {
    */
   const openModal = (content) => {
     setModalContent(content);
-  }
+  };
 
-  //Closes the modal.
+  // Closes the modal.
   const closeModal = () => {
     setIsModalOpen(false);
-  }
+  };
 
   /** @type {ModalContextValue} */
   const value = {
     isModalOpen,
     openModal,
     closeModal,
-    modalContent
-  }
+    modalContent,
+  };
 
   return (
     <ModalContext.Provider value={value}>
       {children}
       {modalContent}
     </ModalContext.Provider>
-  )
+  );
 }
 
 /**
  * A hook that provides access to the modal state and functions.
  * @returns {ModalContextValue} The modal context value.
  */
-export function useModal () {
+export function useModal() {
   return useContext(ModalContext);
 }
